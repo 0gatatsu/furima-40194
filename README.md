@@ -10,7 +10,7 @@
 | first_name_kanji      | string | null: false              |
 | last_name_kanji       | string | null: false              |
 | first_name_kana       | string | null: false              |
-| last_name_kana        | sting  |null: false               |
+| last_name_kana        | string |null: false               |
 | birthday              | date   | null: false              |
 
 ### Association
@@ -27,11 +27,11 @@
 | price         | integer    | null: false                   |
 | user          | references | null: false foreign_key: true |
 | content       | text       | null: false                   |
-| genre_id     | integer    | null false                    |
-| quality_id    | integer    | null false                    |
-| payment_id    | integer    | null false                    |
-| prefecture_id | integer    | null false                    |
-| day_id        | integer    | null false                    |
+| genre_id      | integer    | null:false                    |
+| quality_id    | integer    | null:false                    |
+| payment_id    | integer    | null:false                    |
+| prefecture_id | integer    | null:false                    |
+| day_id        | integer    | null:false                    |
 
 ### Association
 
