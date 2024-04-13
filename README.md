@@ -27,11 +27,11 @@
 | price         | integer    | null: false                   |
 | user          | references | null: false foreign_key: true |
 | content       | text       | null: false                   |
-| genre_id      | integer    | null:false                    |
-| quality_id    | integer    | null:false                    |
-| payment_id    | integer    | null:false                    |
-| prefecture_id | integer    | null:false                    |
-| day_id        | integer    | null:false                    |
+| genre_id      | integer    | null: false                   |
+| quality_id    | integer    | null: false                   |
+| payment_id    | integer    | null: false                   |
+| prefecture_id | integer    | null: false                   |
+| day_id        | integer    | null: false                   |
 
 ### Association
 
