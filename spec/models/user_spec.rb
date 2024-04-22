@@ -39,9 +39,9 @@ RSpec.describe User, type: :model do
         expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
       it 'emailに@が含まれていなければ登録できない' do
-        @user.email = 'aaaaaaaaaa'
+        @user.email = 'testmail '
         @user.valid?
-        expect(@user.errors.full_messages).to include
+        expect(@user.errors.full_messages).to include('Email is invalid')
       end
       it 'passwordが空では登録できない' do
         @user.password = ''
