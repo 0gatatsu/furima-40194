@@ -10,7 +10,7 @@
 | first_name_kanji      | string | null: false              |
 | last_name_kanji       | string | null: false              |
 | first_name_kana       | string | null: false              |
-| last_name_kana        | string | null: false               |
+| last_name_kana        | string | null: false              |
 | birthday              | date   | null: false              |
 
 ### Association
