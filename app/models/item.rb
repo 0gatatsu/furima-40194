@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :day
 
   validates :name, :image, :price, :content, :genre_id, :quality_id, :payment_id, :prefecture_id, :day_id, presence: true
-  validates :price, numericality: { less_than: 9_999_999, greater_than: 300 }
+  validates :price, numericality: { less_than_or_equal_to: 9999999, greater_than_or_equal_to: 300 }
 
   with_options numericality: { other_than: 0, message: "can't be blank"} do
     validates :genre_id

@@ -4,7 +4,6 @@ FactoryBot.define do
     name {Faker::Name.initials(number: 2)}
     price { 500 }
     content {Faker::Lorem.sentence}
-    user_id { @user }
     genre_id { 1 }
     quality_id { 1 }
     payment_id { 1 }
