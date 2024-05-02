@@ -29,32 +29,32 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Content can't be blank")
       end
       it 'genre_idが空では保存できないこと' do
-        @item.genre = nil
+        @item.genre_id = { other_than: 0 }
         @item.valid?
         expect(@item.errors.full_messages).to include("Genre can't be blank")
       end
       it 'quality_idが空では保存できないこと' do
-        @item.quality = nil
+        @item.quality_id = { other_than: 0 }
         @item.valid?
         expect(@item.errors.full_messages).to include("Quality can't be blank")
       end
       it 'payment_idが空では保存できないこと' do
-        @item.payment = nil
+        @item.payment_id =  { other_than: 0 }
         @item.valid?
         expect(@item.errors.full_messages).to include("Payment can't be blank")
       end
       it 'prefecture_idが空では保存できないこと' do
-        @item.prefecture = nil
+        @item.prefecture_id =  { other_than: 0 }
         @item.valid?
         expect(@item.errors.full_messages).to include("Prefecture can't be blank")
       end
-      it 'day_idが空では保存できないこと' do
-        @item.day = nil
+      it 'days_idが空では保存できないこと' do
+        @item.days_id=  { other_than: 0 }
         @item.valid?
-        expect(@item.errors.full_messages).to include("Day can't be blank")
+        expect(@item.errors.full_messages).to include("Days can't be blank")
       end
       it 'priceが空では保存できないこと' do
-        @item.price = ''
+        @item.price = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end

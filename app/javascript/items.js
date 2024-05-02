@@ -12,7 +12,7 @@ function calculate(){
     if(300 <= price && price <= 9999999) {
 
       const fee = Math.floor(price / 10);
-      const rest = (price - fee);
+      const rest = price - fee;
       
       addTaxPrice.innerHTML = fee;
       profit.innerHTML = rest;

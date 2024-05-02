@@ -8,7 +8,7 @@ FactoryBot.define do
     quality_id { 1 }
     payment_id { 1 }
     prefecture_id { 1 }
-    day_id { 1 }
+    days_id { 1 }
 
     association :user
 
