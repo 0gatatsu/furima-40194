@@ -15,7 +15,8 @@
         商品画像
         <span class="indispensable">必須</span>
       </div>
-          <div class="click-upload">
+      <div class="click-upload">
+      <%#= image_tag item.image.variant(resize:`500x500`), class="click-upload" if item.image.attached? #%>
         <p>
           クリックしてファイルをアップロード
         </p>
