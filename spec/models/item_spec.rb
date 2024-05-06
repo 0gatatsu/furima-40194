@@ -39,17 +39,17 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Quality can't be blank")
       end
       it 'payment_idが空では保存できないこと' do
-        @item.payment_id =  { other_than: 0 }
+        @item.payment_id = { other_than: 0 }
         @item.valid?
         expect(@item.errors.full_messages).to include("Payment can't be blank")
       end
       it 'prefecture_idが空では保存できないこと' do
-        @item.prefecture_id =  { other_than: 0 }
+        @item.prefecture_id = { other_than: 0 }
         @item.valid?
         expect(@item.errors.full_messages).to include("Prefecture can't be blank")
       end
       it 'days_idが空では保存できないこと' do
-        @item.days_id=  { other_than: 0 }
+        @item.days_id = { other_than: 0 }
         @item.valid?
         expect(@item.errors.full_messages).to include("Days can't be blank")
       end
@@ -67,7 +67,7 @@ RSpec.describe Item, type: :model do
         @item.price = 10_000_000
         @item.valid?
         expect(@item.errors.full_messages).to include('Price must be less than or equal to 9999999')
-      end   
+      end
 
       it '価格に半角数字以外が含まれている場合は出品できない' do
         @item.price = 'ああああ'
@@ -80,7 +80,6 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('User must exist')
       end
-      
     end
   end
 end

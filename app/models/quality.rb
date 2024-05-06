@@ -1,5 +1,4 @@
 class Quality < ActiveHash::Base
-
   self.data = [
     { id: 0, name: '--' },
     { id: 1, name: '新品・未使用' },
@@ -12,5 +11,4 @@ class Quality < ActiveHash::Base
 
   include ActiveHash::Associations
   has_one :item
-  
 end
