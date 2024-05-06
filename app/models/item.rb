@@ -7,9 +7,9 @@ class Item < ApplicationRecord
   belongs_to_active_hash :days
 
   validates :name, :image, :price, :content, :genre_id, :quality_id, :payment_id, :prefecture_id, :days_id, presence: true
-  validates :price, numericality: { only_integer:true, less_than_or_equal_to: 9999999, greater_than_or_equal_to: 300 }
+  validates :price, numericality: { only_integer: true, less_than_or_equal_to: 9_999_999, greater_than_or_equal_to: 300 }
 
-  with_options numericality: { other_than: 0, message: "can't be blank"} do
+  with_options numericality: { other_than: 0, message: "can't be blank" } do
     validates :genre_id
     validates :quality_id
     validates :payment_id
@@ -18,8 +18,7 @@ class Item < ApplicationRecord
   end
 
   belongs_to :user
-  #has_many :comments
-  #has_one :order
+  # has_many :comments
+  # has_one :order
   has_one_attached :image
-
 end
